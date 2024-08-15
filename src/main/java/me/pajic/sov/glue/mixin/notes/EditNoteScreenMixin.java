@@ -1,4 +1,4 @@
-package me.pajic.sov.glue.module.notes.mixin;
+package me.pajic.sov.glue.mixin.notes;
 
 import com.chaosthedude.notes.gui.EditNoteScreen;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
@@ -10,7 +10,7 @@ import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@IfModLoaded("notes")
+@IfModLoaded(value = "notes", aliases = {"cherry-on-top"})
 @Mixin(EditNoteScreen.class)
 public abstract class EditNoteScreenMixin extends Screen {
 

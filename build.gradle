@@ -10,33 +10,73 @@ base {
     archivesName = project.archives_base_name
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        "sov-glue" {
-            sourceSet sourceSets.main
-            sourceSet sourceSets.client
+repositories {
+    mavenCentral()
+    maven {
+        name = 'ParchmentMC'
+        url = 'https://maven.parchmentmc.org'
+    }
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven { url 'https://maven.wispforest.io/releases/' }
+    maven { url 'https://jitpack.io' }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
         }
     }
 }
 
-repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
-}
-
 dependencies {
-    // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings()
+    mappings loom.layered() {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-${project.parchment_version}@zip")
+    }
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // Fabric API. This is technically optional, but you probably want it anyway.
+    // Fabric API
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // MixinExtras 0.5 beta
+    implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}"))
+    include("io.github.llamalad7:mixinextras-fabric:${project.mixinextras_version}")
+
+    // MixinConstraints
+    include(implementation("com.moulberry:mixinconstraints:${project.mixinconstraints_version}"))
+
+    // ModMenu
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+
+    // owo-lib
+    annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+    include "io.wispforest:owo-sentinel:${project.owo_version}"
+
+    // Cherry On Top
+    modImplementation "maven.modrinth:cherry-on-top:${project.cot_version}"
+    modImplementation("com.github.mattidragon:jsonpatcher:${project.jsonpatcher_version + "-mc." + project.minecraft_version}")
+    modCompileOnly "com.github.MattiDragon:JsonPatcherLang:v1.0.0"
+    modImplementation("maven.modrinth:custombrewrecipes:${project.custombrewrecipes_version}")
+    modImplementation "maven.modrinth:dcwa:${project.dcwa_version}"
+    implementation "net.objecthunter:exp4j:${project.exp4j_version}"
+
+    // EMI
+    modImplementation "dev.emi:emi-fabric:${project.emi_version}"
+
+    // Notes
+    modImplementation "maven.modrinth:notes:${project.notes_version}"
+
+    // Guarding
+    modImplementation "maven.modrinth:guarding:${project.guarding_version}"
+    modImplementation "maven.modrinth:sketch:${project.sketch_version}"
 }
 
 processResources {

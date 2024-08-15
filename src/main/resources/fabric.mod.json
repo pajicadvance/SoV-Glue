@@ -4,25 +4,23 @@
   "version": "${version}",
   "name": "SoV - Glue",
   "description": "Custom data and mod compatibility patches for Simplicity of Vanilla",
-  "authors": [],
+  "authors": [
+    "pajic"
+  ],
   "contact": {},
   "license": "MIT",
   "icon": "assets/sov-glue/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "me.pajic.sov.glue.client.GlueClient"
-    ],
     "main": [
-      "me.pajic.sov.glue.Glue"
+      "me.pajic.sov.glue.Main"
+    ],
+    "emi" : [
+      "me.pajic.sov.glue.emi.GlueEmiPlugin"
     ]
   },
   "mixins": [
-    "sov-glue.mixins.json",
-    {
-      "config": "sov-glue.client.mixins.json",
-      "environment": "client"
-    }
+    "sov-glue.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

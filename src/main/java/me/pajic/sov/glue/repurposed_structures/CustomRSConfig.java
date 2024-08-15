@@ -1,4 +1,4 @@
-package me.pajic.sov.glue.module.repurposed_structures;
+package me.pajic.sov.glue.repurposed_structures;
 
 import me.pajic.sov.glue.Main;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
