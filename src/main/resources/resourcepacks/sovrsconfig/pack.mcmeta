@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "SoV Custom RS Config",
+    "pack_format": 26,
+    "supported_formats": [
+      0,
+      1000000
+    ]
+  }
+}

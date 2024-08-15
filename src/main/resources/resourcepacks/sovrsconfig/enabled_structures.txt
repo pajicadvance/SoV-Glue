@@ -1,0 +1,8 @@
+SoV Custom RS Config
+Enabled structures:
+- all villages
+- all dungeons
+- all mineshafts
+- end: shipwrecks, ruined portals, outposts, ancient cities
+- badlands well
+- mangrove witch hut
