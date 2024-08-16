@@ -20,4 +20,7 @@ public class GlueConfigModel {
 
     @SectionHeader("guarding")
     public boolean guardingNetheriteShieldRecipe = true;
+
+    @SectionHeader("mouseTweaks")
+    @Sync(Option.SyncMode.NONE) public boolean disableBundleScroll = true;
 }

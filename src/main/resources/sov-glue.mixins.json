@@ -4,6 +4,7 @@
   "package": "me.pajic.sov.glue.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "mousetweaks.MainMixin"
   ],
   "injectors": {
     "defaultRequire": 1

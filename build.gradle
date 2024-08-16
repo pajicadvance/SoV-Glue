@@ -77,6 +77,9 @@ dependencies {
     // Guarding
     modImplementation "maven.modrinth:guarding:${project.guarding_version}"
     modImplementation "maven.modrinth:sketch:${project.sketch_version}"
+
+    // Mouse Tweaks
+    modImplementation "maven.modrinth:mouse-tweaks:${project.mousetweaks_version}"
 }
 
 processResources {
