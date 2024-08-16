@@ -71,9 +71,6 @@ dependencies {
     // EMI
     modImplementation "dev.emi:emi-fabric:${project.emi_version}"
 
-    // Notes
-    modImplementation "maven.modrinth:notes:${project.notes_version}"
-
     // Guarding
     modImplementation "maven.modrinth:guarding:${project.guarding_version}"
     modImplementation "maven.modrinth:sketch:${project.sketch_version}"

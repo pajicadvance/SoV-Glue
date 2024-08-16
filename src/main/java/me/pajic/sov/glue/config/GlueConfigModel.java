@@ -15,9 +15,6 @@ public class GlueConfigModel {
     @SectionHeader("repurposedStructures")
     public boolean customRSConfigDatapack = true;
 
-    @SectionHeader("notes")
-    public boolean notesButtonLock = true;
-
     @SectionHeader("guarding")
     public boolean guardingNetheriteShieldRecipe = true;
 
