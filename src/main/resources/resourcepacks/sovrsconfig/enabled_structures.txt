@@ -3,6 +3,6 @@ Enabled structures:
 - all villages
 - all dungeons
 - all mineshafts
-- end: shipwrecks, ruined portals, outposts, ancient cities
+- end: shipwrecks, ruined portals, outposts
 - badlands well
 - mangrove witch hut
