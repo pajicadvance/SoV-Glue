@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "sov-glue",
+  "id": "modglue",
   "version": "${version}",
-  "name": "SoV - Glue",
-  "description": "Custom data and mod compatibility patches for Simplicity of Vanilla",
+  "name": "Mod Glue",
+  "description": "Auto-enabling cross-mod compatibility patches and data",
   "authors": [
     "pajic"
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/sov-glue/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.pajic.sov.glue.Main"
+      "me.pajic.modglue.Main"
     ],
     "emi" : [
-      "me.pajic.sov.glue.emi.GlueEmiPlugin"
+      "me.pajic.modglue.emi.GlueEmiPlugin"
     ]
   },
   "mixins": [
-    "sov-glue.mixins.json"
+    "modglue.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

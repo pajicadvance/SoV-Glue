@@ -1,0 +1,29 @@
+{
+  "type": "palette",
+  "priority": 100,
+  "displayName": "text.itemswapper.palette.misc.hammocks",
+  "items": [
+    "comforts:hammock_black",
+    "comforts:hammock_blue",
+    "comforts:hammock_brown",
+    "comforts:hammock_white",
+    "comforts:hammock_cyan",
+    "comforts:hammock_gray",
+    "comforts:hammock_green",
+    "comforts:hammock_light_blue",
+    "comforts:hammock_light_gray",
+    "comforts:hammock_lime",
+    "comforts:hammock_magenta",
+    "comforts:hammock_orange",
+    "comforts:hammock_pink",
+    "comforts:hammock_purple",
+    "comforts:hammock_red",
+    "comforts:hammock_yellow"
+  ],
+  "shortcuts": [
+    {
+      "type": "link",
+      "target": "itemswapper:v2/misc/beds"
+    }
+  ]
+}

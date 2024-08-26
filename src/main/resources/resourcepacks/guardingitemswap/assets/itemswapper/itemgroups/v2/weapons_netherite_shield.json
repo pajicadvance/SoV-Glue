@@ -1,0 +1,7 @@
+{
+  "type": "listModification",
+  "target": "itemswapper:v2/weapons",
+  "addItems": [
+    "guarding:netherite_shield"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "listModification",
+  "target": "itemswapper:v2/consumables/unprocessed_food",
+  "addItems": [
+    "farmersdelight:wheat_dough",
+    "farmersdelight:raw_pasta",
+    "farmersdelight:minced_beef",
+    "farmersdelight:chicken_cuts",
+    "farmersdelight:bacon",
+    "farmersdelight:cod_slice",
+    "farmersdelight:salmon_slice",
+    "farmersdelight:mutton_chops",
+    "farmersdelight:ham"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "paletteModification",
+  "target": "itemswapper:v2/misc/beds",
+  "addItems": [
+    "comforts:hammock_white"
+  ]
+}

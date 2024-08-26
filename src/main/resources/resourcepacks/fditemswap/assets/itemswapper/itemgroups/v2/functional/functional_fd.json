@@ -1,0 +1,10 @@
+{
+  "type": "paletteModification",
+  "target": "itemswapper:v2/functional/functional",
+  "addItems": [
+    "farmersdelight:stove",
+    "farmersdelight:skillet",
+    "farmersdelight:cooking_pot",
+    "farmersdelight:basket"
+  ]
+}

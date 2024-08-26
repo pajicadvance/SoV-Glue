@@ -1,0 +1,7 @@
+{
+  "type": "listModification",
+  "target": "itemswapper:v2/misc/devices",
+  "addItems": [
+    "farmersdelight:rope"
+  ]
+}

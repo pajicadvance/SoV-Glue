@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.pajic.modglue.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "mousetweaks.MainMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": []
+}
