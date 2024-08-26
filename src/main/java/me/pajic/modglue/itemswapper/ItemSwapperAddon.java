@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 public class ItemSwapperAddon {
 
     public static void init() {
-        FabricLoader.getInstance().getModContainer("sov-glue").ifPresent(modContainer -> {
+        FabricLoader.getInstance().getModContainer("modglue").ifPresent(modContainer -> {
             if (FabricLoader.getInstance().isModLoaded("itemswapper")) {
                 if (FabricLoader.getInstance().isModLoaded("chalk")) {
                     ResourceManagerHelper.registerBuiltinResourcePack(
