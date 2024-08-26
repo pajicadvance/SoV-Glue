@@ -4,6 +4,7 @@
   "package": "me.pajic.modglue.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "elytraswimfix.ElytraSwimFixMixin",
     "mousetweaks.MainMixin"
   ],
   "injectors": {
