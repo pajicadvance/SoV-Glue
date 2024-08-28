@@ -12,28 +12,28 @@ public class ItemSwapperAddon {
             if (FabricLoader.getInstance().isModLoaded("itemswapper")) {
                 if (FabricLoader.getInstance().isModLoaded("chalk")) {
                     ResourceManagerHelper.registerBuiltinResourcePack(
-                            ResourceLocation.parse("sov-glue:chalkitemswap"),
+                            ResourceLocation.parse("modglue:chalkitemswap"),
                             modContainer,
                             ResourcePackActivationType.ALWAYS_ENABLED
                     );
                 }
                 if (FabricLoader.getInstance().isModLoaded("comforts")) {
                     ResourceManagerHelper.registerBuiltinResourcePack(
-                            ResourceLocation.parse("sov-glue:comfortsitemswap"),
+                            ResourceLocation.parse("modglue:comfortsitemswap"),
                             modContainer,
                             ResourcePackActivationType.ALWAYS_ENABLED
                     );
                 }
                 if (FabricLoader.getInstance().isModLoaded("farmersdelight")) {
                     ResourceManagerHelper.registerBuiltinResourcePack(
-                            ResourceLocation.parse("sov-glue:fditemswap"),
+                            ResourceLocation.parse("modglue:fditemswap"),
                             modContainer,
                             ResourcePackActivationType.ALWAYS_ENABLED
                     );
                 }
                 if (FabricLoader.getInstance().isModLoaded("guarding")) {
                     ResourceManagerHelper.registerBuiltinResourcePack(
-                            ResourceLocation.parse("sov-glue:guardingitemswap"),
+                            ResourceLocation.parse("modglue:guardingitemswap"),
                             modContainer,
                             ResourcePackActivationType.ALWAYS_ENABLED
                     );
