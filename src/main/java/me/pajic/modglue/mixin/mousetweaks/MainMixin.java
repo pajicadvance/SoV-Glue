@@ -11,10 +11,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import yalter.mousetweaks.Main;
 
-@IfModLoaded(value = "mousetweaks", aliases = {"bundle_scroll"})
+@IfModLoaded("mousetweaks")
 @Mixin(Main.class)
 public class MainMixin {
 
+    @IfModLoaded("bundle_scroll")
     @Inject(
             method = "onMouseScrolled",
             at = @At(

@@ -2,9 +2,6 @@
   "type": "listModification",
   "target": "itemswapper:v2/consumables/food",
   "addItems": [
-    "spiceoffabric:paper_bag",
-    "spiceoffabric:lunch_box",
-    "spiceoffabric:picnic_basket",
     "farmersdelight:cabbage",
     "farmersdelight:tomato",
     "farmersdelight:onion",

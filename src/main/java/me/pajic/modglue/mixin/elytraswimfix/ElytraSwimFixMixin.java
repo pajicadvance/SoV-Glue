@@ -12,10 +12,11 @@ import org.spongepowered.asm.mixin.Mixin;
 
 import java.util.Optional;
 
-@IfModLoaded(value = "elytraswimfix", aliases = {"trinkets"})
+@IfModLoaded("elytraswimfix")
 @Mixin(ElytraSwimFix.class)
 public class ElytraSwimFixMixin {
 
+    @IfModLoaded("trinkets")
     @WrapMethod(method = "isWearingElytra")
     public boolean isWearingElytra(ServerPlayer player, Operation<Boolean> original) {
         Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);

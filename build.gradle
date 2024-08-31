@@ -37,6 +37,14 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+    maven {
+        name = "Greenhouse Maven"
+        url = 'https://repo.greenhouse.house/releases/'
+    }
+    maven {
+        name "greenhouseSnapshots"
+        url "https://repo.greenhouse.house/snapshots"
+    }
 }
 
 dependencies {
@@ -74,7 +82,15 @@ dependencies {
     modImplementation "maven.modrinth:elytraswimfix:${project.elytraswimfix_version}"
 
     // Trinkets
-    modImplementation "dev.emi:trinkets:${trinkets_version}"
+    modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+
+    // Farmer's Delight Refabricated
+    modImplementation("vectorwing:FarmersDelight:${project.fdrf_version}") {
+        exclude(group: "net.fabricmc")
+    }
+
+    // Raised
+    modImplementation "maven.modrinth:raised:${project.raised_version}"
 }
 
 processResources {
