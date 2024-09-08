@@ -2,6 +2,7 @@ package me.pajic.modglue.mixin.mousetweaks;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Items;
@@ -15,7 +16,6 @@ import yalter.mousetweaks.Main;
 @Mixin(Main.class)
 public class MainMixin {
 
-    @IfModLoaded("bundle_scroll")
     @Inject(
             method = "onMouseScrolled",
             at = @At(
@@ -28,7 +28,7 @@ public class MainMixin {
                                            CallbackInfoReturnable<Boolean> cir,
                                            @Local Slot selectedSlot
     ) {
-        if (selectedSlot.getItem().is(Items.BUNDLE)) {
+        if (FabricLoader.getInstance().isModLoaded("bundle_scroll") && selectedSlot.getItem().is(Items.BUNDLE)) {
             cir.setReturnValue(false);
         }
     }
